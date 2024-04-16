@@ -10,7 +10,12 @@ import messageRoute from "./routes/message.route.js";
 
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://estate-origin.vercel.app", // Allow requests from this origin
+    credentials: true, // Allow credentials (cookies)
+  })
+);
 app.use(express.json());
 app.use(cookieParser());
 
