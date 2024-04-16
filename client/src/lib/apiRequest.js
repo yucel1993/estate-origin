@@ -1,7 +1,9 @@
 import axios from "axios";
 
+const API_KEY = meta.import.VITE_API_KEY;
+
 const apiRequest = axios.create({
-  baseURL: "http://localhost:8800/api",
+  baseURL: `${API_KEY}/api`,
   withCredentials: true,
 });
 
