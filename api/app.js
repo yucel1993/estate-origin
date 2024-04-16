@@ -12,7 +12,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "*", // Allow requests from this origin
+    origin: "https://estate-origin.vercel.app", // Allow requests from this origin
     credentials: true, // Allow credentials (cookies)
   })
 );
