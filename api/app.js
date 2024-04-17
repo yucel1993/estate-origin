@@ -12,10 +12,11 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://estate-origin.vercel.app", // Allow requests from this origin
+    origin: ["https://estate-origin.vercel.app", "http://localhost:5173"], // Allow requests from these origins
     credentials: true, // Allow credentials (cookies)
   })
 );
+
 app.use(express.json());
 app.use(cookieParser());
 
